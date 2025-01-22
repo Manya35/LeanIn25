@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching DOM Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #main-heading {
+            color: darkblue;
+        }
+        .example-class {
+            color: green;
+            margin: 5px 0;
+        }
+        span {
+            display: inline-block;
+            margin-right: 10px;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">DOM Manipulation Example</h1>
+    <p class="example-class">This is a paragraph with a class name.</p>
+    <p class="example-class">Another paragraph with the same class name.</p>
+    <p id="unique-paragraph">This is a paragraph with an ID.</p>
+    <div>
+        <span>Span element 1</span>
+        <span>Span element 2</span>
+    </div>
+
+    <script>
+        // querySelector: First element with class 'example-class'
+        const firstParagraph = document.querySelector('.example-class');
+        firstParagraph.style.color = 'red';  // Change text color
+
+        // querySelectorAll: All span elements
+        const allSpans = document.querySelectorAll('span');
+        allSpans.forEach((span, index) => {
+            span.textContent = `Updated span ${index + 1}`;
+        });
+
+        // getElementById: Element with ID 'main-heading'
+        const heading = document.getElementById('main-heading');
+        heading.textContent = 'Updated Heading Text';
+
+        // getElementsByClassName: All elements with class 'example-class'
+        const classElements = document.getElementsByClassName('example-class');
+        Array.from(classElements).forEach(el => {
+            el.style.fontWeight = 'bold';  // Make text bold
+        });
+
+        // getElementsByTagName: All 'p' elements
+        const paragraphs = document.getElementsByTagName('p');
+        for (let p of paragraphs) {
+            p.style.backgroundColor = 'lightyellow';  // Set background color
+        }
+    </script>
+</body>
+</html>
