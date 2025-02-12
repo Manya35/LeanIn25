@@ -1,0 +1,11 @@
+1. Youtube link for understanding woring of firebase
+https://www.youtube.com/watch?v=p9pgI3Mg-So&t=699s
+
+2. Firebase github repo
+https://github.com/firebase
+
+3. Firebase Docs
+https://firebase.google.com/docs
+
+4. Fierbase Console
+https://firebase.google.com
